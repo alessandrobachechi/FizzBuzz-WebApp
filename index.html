@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>FizzBuzz | App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="inputScreen">
+        <h1>FIZZ BUZZ | Home</h1>
+        <input type="number" id="fizzInput" placeholder="Fizz">
+        <input type="number" id="buzzInput" placeholder="Buzz">
+        <input type="number" id="cellsInput" placeholder="Celle">
+        <button onclick="generateFizzBuzzTable()">Genera</button>
+    </div>
+
+    <div id="fizzBuzzScreen" style="display: none;">
+        <div class="title">
+            <button id="backButton">Indietro</button>
+            <h1 class="text">FIZZ BUZZ | Result</h1>
+        </div>
+        <div id="fizzBuzzTable">
+
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

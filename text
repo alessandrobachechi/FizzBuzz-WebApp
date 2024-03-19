@@ -1,0 +1,51 @@
+for (let i = 1; i <= cellsInput; i++): Questo ciclo itera da 1 a cellsInput, dove cellsInput è il numero fino al quale vuoi stampare la sequenza FizzBuzz.
+
+let output = '';: Inizializza una stringa vuota output che verrà utilizzata per memorizzare il risultato FizzBuzz per il numero corrente i.
+
+if (i % fizzInput === 0) output += 'Fizz';: Controlla se i è divisibile per fizzInput (tipicamente 3 per il problema FizzBuzz). Se lo è, aggiunge "Fizz" a output.
+
+if (i % buzzInput === 0) output += 'Buzz';: Controlla se i è divisibile per buzzInput (tipicamente 5 per il problema FizzBuzz). Se lo è, aggiunge "Buzz" a output.
+
+if (output === 'FizzBuzz') { output = 'FizzBuzz'; }: Questa condizione sembra ridondante perché se output è "FizzBuzz", rimane "FizzBuzz". Sembra un tentativo di assicurarsi che "FizzBuzz" venga stampato per i numeri divisibili sia per 3 che per 5, ma è inutile perché le condizioni precedenti già gestiscono questo caso.
+
+const cell = document.createElement('div');: Crea un nuovo elemento div, che verrà utilizzato per visualizzare il risultato FizzBuzz.
+
+cell.className = 'cell';: Assegna il nome della classe "cell" all'elemento div, che può essere utilizzato per lo stile con CSS.
+
+cell.textContent = output || i;: Imposta il contenuto testuale dell'elemento div a output se non è una stringa vuota (significando che contiene "Fizz", "Buzz", o "FizzBuzz"), altrimenti imposta il contenuto testuale al numero corrente i.
+
+
+
+
+const fizzInput = document.getElementById('fizzInput').value;: Questa riga recupera il valore dell'elemento HTML con l'ID fizzInput e lo assegna alla costante fizzInput. Questo valore rappresenta il divisore per il quale i numeri devono essere sostituiti con "Fizz" nell'algoritmo FizzBuzz.
+
+const buzzInput = document.getElementById('buzzInput').value;: Analogamente, questa riga recupera il valore dell'elemento HTML con l'ID buzzInput e lo assegna alla costante buzzInput. Questo valore rappresenta il divisore per il quale i numeri devono essere sostituiti con "Buzz" nell'algoritmo FizzBuzz.
+
+const cellsInput = document.getElementById('cellsInput').value;: Questa riga recupera il valore dell'elemento HTML con l'ID cellsInput e lo assegna alla costante cellsInput. Questo valore rappresenta il numero fino al quale l'algoritmo FizzBuzz deve essere eseguito.
+
+const fizzBuzzTable = document.getElementById('fizzBuzzTable');: Questa riga recupera l'elemento HTML con l'ID fizzBuzzTable e lo assegna alla costante fizzBuzzTable. Questo elemento sarà utilizzato per visualizzare la sequenza FizzBuzz generata dall'algoritmo.
+
+fizzBuzzTable.innerHTML = '';: Questa riga imposta il contenuto HTML dell'elemento fizzBuzzTable a una stringa vuota. Questo è fatto per cancellare qualsiasi contenuto esistente nell'elemento prima di aggiungere la nuova sequenza FizzBuzz. L'uso di innerHTML per impostare il contenuto di un elemento è una pratica comune in JavaScript per manipolare il DOM
+
+
+
+
+document.getElementById('inputScreen').style.display = 'none';: Questa riga di codice nasconde l'elemento HTML con l'ID inputScreen impostando la sua proprietà style.display su 'none'. Impostando display su 'none', l'elemento e tutto il suo contenuto vengono nascosti dalla pagina web. Questo è utile quando si desidera rimuovere temporaneamente un elemento dalla visualizzazione senza rimuoverlo completamente dal DOM (Document Object Model) 135.
+
+document.getElementById('fizzBuzzScreen').style.display = 'block';: Al contrario, questa riga di codice rende visibile l'elemento HTML con l'ID fizzBuzzScreen impostando la sua proprietà style.display su 'block'. Impostando display su 'block', l'elemento viene visualizzato come un elemento a livello di blocco, che occupa tutto il suo spazio disponibile orizzontalmente e inizia su una nuova riga. Questo è comunemente usato per mostrare contenuti che dovrebbero essere visibili e interattivi, come una tabella o un form
+
+Il metodo appendChild() in JavaScript è utilizzato per aggiungere un nodo (tipicamente un elemento) alla fine dell'elenco dei nodi figli di un nodo padre specificato. Questo metodo è parte dell'interfaccia Node e può essere eseguito su nodi figli esistenti o creando nuovi elementi.
+
+Nel contesto del tuo codice, fizzBuzzTable.appendChild(cell);, stai utilizzando appendChild() per aggiungere l'elemento cell (che è stato creato dinamicamente e contiene il risultato FizzBuzz per un numero specifico) alla fine dell'elenco dei nodi figli dell'elemento fizzBuzzTable. Questo significa che ogni volta che il ciclo itera e genera un nuovo elemento cell, questo viene aggiunto alla fine della tabella FizzBuzz, visualizzando così la sequenza FizzBuzz generata.
+
+Se cell è un riferimento a un nodo esistente nel documento, il metodo appendChild() sposterà cell dalla sua posizione corrente alla nuova posizione. Questo è particolarmente utile quando si desidera aggiungere elementi dinamici a una pagina web senza doverli rimuovere e reinserire manualmente nel DOM
+
+
+
+document.addEventListener('DOMContentLoaded', function() {...}); - Questa riga assegna un listener all'evento DOMContentLoaded del documento. L'evento DOMContentLoaded si verifica quando il documento HTML è completamente caricato e analizzato, senza aspettare che le immagini, i fogli di stile e gli script siano completamente caricati. Questo è utile per eseguire codice JavaScript non appena il DOM è pronto, senza dover aspettare che tutto il contenuto della pagina sia completamente caricato 125.
+
+All'interno della funzione di callback dell'evento DOMContentLoaded, viene assegnato un altro listener all'elemento con l'ID backButton per l'evento click. Questo significa che una volta che il DOM è completamente caricato, il codice all'interno di questa funzione verrà eseguito ogni volta che l'utente fa clic sul pulsante con l'ID backButton 5.
+
+Quando l'utente fa clic sul pulsante backButton, il codice all'interno della funzione di callback dell'evento click viene eseguito. Questo codice modifica lo stile di due elementi del DOM:
+Imposta la proprietà display dell'elemento con l'ID inputScreen su 'block', rendendolo visibile.
+Imposta la proprietà display dell'elemento con l'ID fizzBuzzScreen su 'none', nascondendolo.
