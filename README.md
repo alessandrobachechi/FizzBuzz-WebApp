@@ -1,21 +1,23 @@
-# FIZZBUZZ
+# FizzBuzz
 
-FIZZBUZZ è un semplice esercizio di programmazione utilizzato nelle interviste per verificare se una persona può scrivere codice o meno. 
-Questo progetto implementa l'esercizio FizzBuzz in vari linguaggi di programmazione.
+## Description
 
-## Come funziona FizzBuzz
+FizzBuzz is a classic programming problem often used in coding interviews. This project is a JavaScript implementation of the FizzBuzz game, designed to test basic programming skills.
 
-Il gioco FizzBuzz inizia con il numero 1 e continua fino a 100. Per ogni numero:
+## Features
 
-- Se il numero è divisibile per 3, si stampa "Fizz".
-- Se il numero è divisibile per 5, si stampa "Buzz".
-- Se il numero è divisibile sia per 3 che per 5, si stampa "FizzBuzz".
-- In caso contrario, si stampa il numero stesso.
+- **Simple Game Logic**: The game prints numbers from 1 to 100. For multiples of three, it prints "Fizz" instead of the number, and for multiples of five, it prints "Buzz". For numbers which are multiples of both three and five, it prints "FizzBuzz".
+- **Versatile Implementation**: This project can be easily adapted for different programming languages, making it a great tool for learning and practicing coding in various environments.
+- **Educational Value**: FizzBuzz is a common interview question that helps assess a candidate's basic programming skills, including loops, conditionals, and basic I/O operations.
 
-## Licenza
+## Installation
 
-Questo progetto è rilasciato sotto la licenza MIT. Vedi il file `LICENSE` per i dettagli.
+To use FizzBuzz, follow these steps:
 
-## Contatti
+1. Clone the repository to your computer:
+2. Open the `index.html` file in your browser to start playing the game.
 
-Se hai domande o suggerimenti, sentiti libero di aprire un issue su GitHub.
+## License
+
+This project is released under the MIT license. For more details, see the `LICENSE` file.
+
